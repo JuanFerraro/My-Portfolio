@@ -1,0 +1,166 @@
+/* src/app/core/navigation/navigation.component.css */
+.navigation {
+  position: sticky;
+  top: 2rem;
+  z-index: 100;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  background: var(--white);
+  padding: 0.5rem;
+  border-radius: 24px 8px 24px 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--slate-gray);
+}
+
+/* Dark mode styles */
+.nav-wrapper.designer-mode {
+  background: var(--black);
+  border-color: var(--gray);
+}
+
+.nav-btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 24px 8px 24px 8px;
+  font-family: 'Cascadia Code', monospace;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+/* Software Engineer Button */
+.software-btn {
+  background: var(--white);
+  color: var(--black);
+  flex: 1;
+}
+
+.designer-mode .software-btn {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Designer Button */
+.designer-btn {
+  background: var(--black);
+  color: var(--white);
+  flex: 1;
+}
+
+.designer-mode .designer-btn {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Expanded State */
+.nav-btn.expanded {
+  flex: 3;
+  padding: 1rem 3rem;
+}
+
+.nav-btn.expanded .btn-text {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Collapsed State */
+.nav-btn.collapsed {
+  flex: 1;
+  padding: 1rem 1.5rem;
+}
+
+.nav-btn.collapsed .btn-text {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+/* Button Text Animation */
+.btn-text {
+  display: inline-block;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover Effects */
+.nav-btn:not(.expanded):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.software-btn:not(.expanded):hover {
+  background: color-mix(in srgb, var(--ice-blue) 80%, white);
+}
+
+.designer-btn:not(.expanded):hover {
+  background: color-mix(in srgb, var(--black) 90%, white);
+}
+
+.designer-mode .designer-btn:not(.expanded):hover {
+  background: color-mix(in srgb, var(--ice-blue) 80%, black);
+}
+
+/* Focus States */
+.nav-btn:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+/* Active/Tap Effect */
+.nav-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigation {
+    top: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .nav-wrapper {
+    width: 100%;
+  }
+  
+  .nav-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 14px;
+  }
+  
+  .nav-btn.expanded {
+    padding: 0.75rem 2rem;
+  }
+  
+  .nav-btn.collapsed {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-btn {
+    font-size: 12px;
+  }
+  
+  .btn-text {
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+  }
+}

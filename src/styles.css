@@ -1,3 +1,193 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
 
-@import 'tailwindcss';
+/* Import Cascadia Code */
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@300;400;500;600;700&display=swap');
+
+/* Color Palette - Base colors (never change) */
+:root {
+  --black: #0D0D0D;
+  --slate-gray: #B8BEBF;
+  --ice-blue: #E4F0F2;
+  --gray: #878B8C;
+  --white: #F4F4F4;
+  
+  /* Typography Scale */
+  --text-title: 64px;
+  --text-subtitle: 32px;
+  --text-body: 24px;
+  --text-caption: 16px;
+  
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  /* Line Heights */
+  --line-tight: 1.2;
+  --line-normal: 1.5;
+  --line-relaxed: 1.8;
+}
+
+/* Software Theme (Light) - Default */
+:root, :root.software-theme {
+  --bg-primary: var(--white);
+  --bg-secondary: var(--ice-blue);
+  --bg-tertiary: var(--slate-gray);
+  --text-primary: var(--black);
+  --text-secondary: var(--gray);
+  --text-tertiary: var(--slate-gray);
+  --accent-primary: var(--ice-blue);
+  --accent-secondary: var(--slate-gray);
+  --border-color: var(--slate-gray);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --gradient-start: var(--ice-blue);
+  --gradient-end: var(--white);
+  --card-bg: var(--white);
+  --nav-bg: var(--white);
+  --nav-border: var(--slate-gray);
+  --button-primary-bg: var(--ice-blue);
+  --button-primary-text: var(--black);
+  --button-secondary-bg: var(--black);
+  --button-secondary-text: var(--white);
+}
+
+/* Designer Theme (Dark) */
+:root.designer-theme {
+  --bg-primary: var(--black);
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: var(--white);
+  --text-secondary: var(--ice-blue);
+  --text-tertiary: var(--slate-gray);
+  --accent-primary: var(--ice-blue);
+  --accent-secondary: var(--gray);
+  --border-color: var(--gray);
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --gradient-start: var(--black);
+  --gradient-end: #1a1a1a;
+  --card-bg: #1a1a1a;
+  --nav-bg: var(--black);
+  --nav-border: var(--gray);
+  --button-primary-bg: var(--ice-blue);
+  --button-primary-text: var(--black);
+  --button-secondary-bg: var(--ice-blue);
+  --button-secondary-text: var(--black);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cascadia Code', 'Courier New', monospace;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: var(--line-normal);
+  font-weight: var(--weight-regular);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography Classes */
+.title {
+  font-size: var(--text-title);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-tight);
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.subtitle {
+  font-size: var(--text-subtitle);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-tight);
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.body-text {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-relaxed);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.caption {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-light);
+  line-height: var(--line-normal);
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-family: 'Cascadia Code', monospace;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+
+.btn-secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --text-title: 48px;
+    --text-subtitle: 28px;
+    --text-body: 20px;
+    --text-caption: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-title: 36px;
+    --text-subtitle: 24px;
+    --text-body: 18px;
+    --text-caption: 14px;
+  }
+}

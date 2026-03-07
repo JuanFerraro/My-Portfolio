@@ -1,0 +1,24 @@
+<!-- src/app/core/navigation/navigation.component.html -->
+<nav class="navigation">
+  <div class="nav-container">
+    <div class="nav-wrapper" [class.designer-mode]="currentTheme() === 'designer'">
+      <!-- Software Engineer Button -->
+      <button 
+        class="nav-btn software-btn" 
+        [class.expanded]="currentTheme() === 'software'"
+        [class.collapsed]="currentTheme() === 'designer'"
+        (click)="setTheme('software')">
+        <span class="btn-text">SOFTWARE DEVELOPER</span>
+      </button>
+      
+      <!-- Designer Button -->
+      <button 
+        class="nav-btn designer-btn" 
+        [class.expanded]="currentTheme() === 'designer'"
+        [class.collapsed]="currentTheme() === 'software'"
+        (click)="setTheme('designer')">
+        <span class="btn-text">DESIGN</span>
+      </button>
+    </div>
+  </div>
+</nav>

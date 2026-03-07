@@ -1,0 +1,71 @@
+
+.portfolio-header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  padding: 8rem;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  transition: background 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Add a subtle pattern for designer mode */
+.designer-theme .portfolio-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 50%, rgba(228, 240, 242, 0.03) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 30px,
+      rgba(228, 240, 242, 0.02) 30px,
+      rgba(228, 240, 242, 0.02) 60px
+    );
+  pointer-events: none;
+}
+
+/* Keep only animations and layout-specific styles */
+.title {
+  animation: fadeInUp 1s ease;
+}
+
+.subtitle {
+  animation: fadeInUp 1s ease 0.2s both;
+  border-bottom: 4px solid var(--accent-primary);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.title-section{
+  flex: 3;
+}
+
+.caption {
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-header {
+    padding: 1rem;
+  }
+}
