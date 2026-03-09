@@ -1,0 +1,43 @@
+<div class="project-card" [class.design-card]="project.category === 'design'">
+  <!-- Project Image -->
+  <div class="card-image">
+    <img [src]="project.imageUrl" [alt]="project.title">
+    
+    <!-- Platform Badge -->
+    <div class="platform-badge" [style.background-color]="getPlatformColor()">
+      <span class="platform-icon">{{ getPlatformIcon() }}</span>
+      <span class="platform-name">{{ project.platform }}</span>
+    </div>
+  </div>
+  
+  <!-- Card Content -->
+  <div class="card-content">
+    <!-- Title and Date -->
+    <div class="card-header">
+      <h3 class="card-title">{{ project.title }}</h3>
+      <span class="card-date">{{ project.date }}</span>
+    </div>
+    
+    <!-- Description -->
+    <p class="card-description">{{ project.description }}</p>
+    
+    <!-- Technologies -->
+    <div class="technologies">
+      <span class="tech-label">Technologies:</span>
+      <div class="tech-tags">
+        <span *ngFor="let tech of project.technologies" class="tech-tag">
+          {{ tech }}
+        </span>
+      </div>
+    </div>
+    
+    <!-- View Button -->
+    <a [href]="project.platformUrl" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="view-btn">
+      View on {{ project.platform }}
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>

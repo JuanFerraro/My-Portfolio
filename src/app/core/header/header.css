@@ -1,6 +1,6 @@
 
 .portfolio-header {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -12,7 +12,6 @@
   overflow: hidden;
 }
 
-/* Optional: Add a subtle pattern for designer mode */
 .designer-theme .portfolio-header::before {
   content: '';
   position: absolute;
@@ -32,7 +31,6 @@
   pointer-events: none;
 }
 
-/* Keep only animations and layout-specific styles */
 .title {
   animation: fadeInUp 1s ease;
 }
