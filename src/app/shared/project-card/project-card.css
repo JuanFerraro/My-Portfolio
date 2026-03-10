@@ -1,8 +1,7 @@
-/* src/app/shared/project-card/project-card.component.css */
 .project-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 24px 8px 24px 8px;
   overflow: hidden;
   transition: all 0.3s ease;
   height: 100%;
@@ -41,7 +40,7 @@
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  border-radius: 30px;
+  border-radius: 16px 6px 16px 6px;;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -114,25 +113,10 @@
   background: var(--bg-secondary);
   color: var(--text-secondary);
   padding: 0.25rem 0.75rem;
-  border-radius: 30px;
+  border-radius: 12px 4px 12px 4px;;
   font-size: 0.75rem;
   font-weight: var(--weight-medium);
   border: 1px solid var(--border-color);
-}
-
-/* Platform Stats */
-.platform-stats {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.stat {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
 }
 
 /* View Button */

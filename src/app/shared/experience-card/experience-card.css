@@ -1,0 +1,239 @@
+.experience-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px 8px 24px 8px;;
+  padding: 2rem;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.experience-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title-section {
+  flex: 1;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+}
+
+.location {
+  font-size: var(--text-caption);
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.location::before {
+  content: '📍';
+  font-size: 0.875rem;
+}
+
+/* Date Badge */
+.date-badge {
+  background: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 16px 8px 16px 8px;;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.date {
+  font-size: var(--text-caption);
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+}
+
+.present-tag {
+  display: inline-block;
+  background: var(--accent-primary);
+  color: var(--button-primary-text);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 30px;
+  margin-left: 0.5rem;
+}
+
+.date-badge.present {
+  border-color: var(--accent-primary);
+}
+
+/* Sections */
+.section-label {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Description List */
+.description-list,
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.description-item {
+  font-size: var(--text-caption);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.description-item::before {
+  content: '•';
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Achievements */
+.achievement-item {
+  font-size: var(--text-caption);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievement-icon {
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+}
+
+/* Technologies */
+.technologies-section {
+  margin-top: 1.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 16px 6px 16px 6px;;
+  font-size: 0.8rem;
+  font-weight: var(--weight-medium);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: var(--accent-primary);
+  color: var(--button-primary-text);
+  border-color: var(--accent-primary);
+}
+
+/* Company Link */
+.company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  transition: gap 0.3s ease;
+}
+
+.company-link:hover {
+  gap: 0.75rem;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.company-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 1.5rem;
+    margin-left: 1rem;
+  }
+  
+  .timeline-dot {
+    left: -1.5rem;
+    width: 12px;
+    height: 12px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .job-title {
+    font-size: 1.25rem;
+  }
+  
+  .company-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-card {
+    padding: 1rem;
+    margin-left: 0.5rem;
+  }
+  
+  .timeline-dot {
+    left: -1rem;
+  }
+}

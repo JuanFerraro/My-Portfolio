@@ -1,0 +1,61 @@
+<div class="experience-card" [class.design-card]="experience.category === 'design'">
+  
+  <div class="card-content">
+    <!-- Header with Title and Date -->
+    <div class="card-header">
+      <div class="title-section">
+        <h3 class="job-title">{{ experience.jobTitle }}</h3>
+        <div class="company-info">
+          <span class="company-name">{{ experience.company }}</span>
+          <span class="location">{{ experience.location }}</span>
+        </div>
+      </div>
+      
+      <div class="date-badge" [class.present]="isPresent">
+        <span class="date">{{ dateRange }}</span>
+        <span *ngIf="isPresent" class="present-tag">Current</span>
+      </div>
+    </div>
+    
+    <!-- Description List -->
+    <div class="description-section">
+      <h4 class="section-label">Responsibilities:</h4>
+      <ul class="description-list">
+        <li *ngFor="let item of experience.description" class="description-item">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Achievements (if any) -->
+    <div class="achievements-section" *ngIf="experience.achievements?.length">
+      <h4 class="section-label">Key Achievements:</h4>
+      <ul class="achievements-list">
+        <li *ngFor="let achievement of experience.achievements" class="achievement-item">
+          <span class="achievement-icon">🏆</span>
+          {{ achievement }}
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Technologies Used -->
+    <div class="technologies-section">
+      <h4 class="section-label">Technologies:</h4>
+      <div class="tech-tags">
+        <span *ngFor="let tech of experience.technologies" class="tech-tag">
+          {{ tech }}
+        </span>
+      </div>
+    </div>
+    
+    <!-- Company Link (if available) -->
+    <a *ngIf="experience.companyUrl" 
+       [href]="experience.companyUrl" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="company-link">
+      Visit Company Website
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>

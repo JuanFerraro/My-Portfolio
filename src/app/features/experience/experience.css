@@ -1,0 +1,56 @@
+.experience-section {
+  padding: 4rem 0;
+  background: var(--bg-primary);
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 3rem;
+}
+
+/* Timeline Line */
+.timeline-line {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-primary),
+    var(--accent-secondary),
+    transparent
+  );
+  transition: background 0.3s ease;
+}
+
+/* Experience List */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Last item special styling */
+.last-item :host ::ng-deep .timeline-dot {
+  background: var(--accent-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 2rem 0;
+  }
+  
+  .timeline-line {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-line {
+    left: 0.5rem;
+  }
+}

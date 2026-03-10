@@ -5,8 +5,7 @@
     
     <!-- Platform Badge -->
     <div class="platform-badge" [style.background-color]="getPlatformColor()">
-      <span class="platform-icon">{{ getPlatformIcon() }}</span>
-      <span class="platform-name">{{ project.platform }}</span>
+      <fa-icon [icon]="getPlatformIcon()" class="platform-icon"></fa-icon>
     </div>
   </div>
   

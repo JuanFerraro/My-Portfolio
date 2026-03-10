@@ -30,7 +30,7 @@ export class ProjectService {
       technologies: ['Python', 'FastAPI', 'JavaScript', 'MongoDB', 'HTML', 'CSS'],
       date: '2023',
       platform: 'github',
-      platformUrl: 'https://github.com/juanbarrios/taskapp',
+      platformUrl: 'https://github.com/JuanFerraro/Practice-HangmanGame',
       category: 'software'
     },
     {
@@ -50,8 +50,30 @@ export class ProjectService {
   private designProjects: Project[] = [
     {
       id: 4,
+      title: 'Mining, Metals and Minerals',
+      description: 'Brand and Logo desing for a company department',
+      imageUrl: 'assets/images/mmm.png',
+      technologies: ['Photoshop', 'Illustrator'],
+      date: '2024',
+      platform: 'behance',
+      platformUrl: 'https://www.behance.net/gallery/244928197/MM-M',
+      category: 'design'
+    },
+    {
+      id: 5,
+      title: 'Biches',
+      description: 'Brand and Logo design for a mango sales company',
+      imageUrl: 'assets/images/biches.png',
+      technologies: ['Photoshop', 'Illustrator'],
+      date: '2025',
+      platform: 'behance',
+      platformUrl: 'https://www.behance.net/gallery/245078227/Picadito',
+      category: 'design'
+    },
+    {
+      id: 6,
       title: 'Picadito Mobile App',
-      description: 'Interactive prototypes for sportive app',
+      description: 'Interactive prototypes for an sportive app',
       imageUrl: 'assets/images/picadito.png',
       technologies: ['Figma', 'Photoshop', 'Illustrator'],
       date: '2022',
