@@ -1,0 +1,56 @@
+<div class="education-card">
+  <div class="card-header">
+    <div class="institution-info">
+      <div>
+        <h3 class="institution-name">{{ education.institution }}</h3>
+        <div class="degree-info">
+          <span class="degree">{{ education.degree }}</span>
+          <span class="field">{{ education.fieldOfStudy }}</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="location-date">
+      <div class="location">
+        <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+        {{ education.location }}
+      </div>
+      <div class="date">
+        <fa-icon [icon]="faCalendar"></fa-icon>
+        {{ dateRange }}
+      </div>
+    </div>
+  </div>
+  
+  <!-- Description -->
+  <div class="description-section" *ngIf="education.description">
+    <ul class="description-list">
+      <li *ngFor="let item of education.description" class="description-item">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Achievements -->
+  <div class="achievements-section" *ngIf="education.achievements?.length">
+    <h4 class="section-label">
+      <fa-icon [icon]="faAward" class="label-icon"></fa-icon>
+      Achievements
+    </h4>
+    <div class="achievements-list">
+      <span *ngFor="let achievement of education.achievements" class="achievement-tag">
+        {{ achievement }}
+      </span>
+    </div>
+  </div>
+  
+  <!-- Institution Website -->
+  <a *ngIf="education.website" 
+     [href]="education.website" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="website-link">
+    Visit Institution Website
+    <fa-icon [icon]="faExternalLinkAlt" class="external-icon"></fa-icon>
+  </a>
+</div>

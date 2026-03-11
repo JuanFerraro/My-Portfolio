@@ -4,10 +4,11 @@ import { Header } from './core/header/header'
 import { Navigation } from './core/navigation/navigation'
 import { Projects } from './features/projects/projects';
 import { Experience } from './features/experience/experience';
+import { Education } from './features/education/education';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navigation, Projects, Experience],
+  imports: [RouterOutlet, Header, Navigation, Projects, Experience, Education],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

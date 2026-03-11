@@ -1,0 +1,40 @@
+<div class="course-card">
+  <div class="course-header">
+    <div class="course-info">
+      <h4 class="course-name">{{ course.name }}</h4>
+      <div class="course-meta">
+        <span class="platform">
+          <fa-icon [icon]="faCertificate"></fa-icon>
+          {{ course.platform }}
+        </span>
+        <span class="date">
+          <fa-icon [icon]="faCalendar"></fa-icon>
+          {{ course.completionDate }}
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Skills -->
+  @if (course.skills?.length){
+    <div class="skills-section">
+      <div class="skills-list">
+        <span *ngFor="let skill of course.skills" class="skill-tag">
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+  }
+  
+  <!-- Certificate Link -->
+  @if (course.certificateUrl){
+    <a 
+      [href]="course.certificateUrl" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="certificate-link">
+      View Certificate
+      <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+    </a>
+  }
+</div>
