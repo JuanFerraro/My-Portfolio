@@ -37,7 +37,7 @@
 
 .subtitle {
   animation: fadeInUp 1s ease 0.2s both;
-  border-bottom: 4px solid var(--accent-primary);
+  border-bottom: 4px solid var(--accent-secondary);
   padding-bottom: 0.5rem;
   display: inline-block;
 }

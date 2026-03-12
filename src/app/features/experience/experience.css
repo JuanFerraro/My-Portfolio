@@ -1,36 +1,16 @@
 .experience-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background: var(--bg-primary);
   transition: background 0.3s ease;
   position: relative;
 }
 
-.timeline {
-  position: relative;
-  margin-top: 3rem;
-}
-
-/* Timeline Line */
-.timeline-line {
-  position: absolute;
-  left: 2rem;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    var(--accent-primary),
-    var(--accent-secondary),
-    transparent
-  );
-  transition: background 0.3s ease;
-}
-
 /* Experience List */
 .experience-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
+  margin: 2rem 0 4rem;
 }
 
 /* Last item special styling */

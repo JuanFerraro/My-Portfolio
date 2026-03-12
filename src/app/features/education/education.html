@@ -1,24 +1,28 @@
-<section class="education-section" *ngIf="shouldDisplay">
+@if (shouldDisplay){
+  <section class="education-section">
   <div class="container">
     <h2 class="subtitle">Education & Certifications</h2>
     
     <!-- Formal Education -->
     <div class="education-grid">
-      <app-education-card 
-        *ngFor="let edu of education"
-        [education]="edu">
-      </app-education-card>
+      @for (edu of education; track edu) {
+        <app-education-card
+          [education]="edu">
+        </app-education-card>
+      }
     </div>
     
     <!-- Courses Section -->
     <div class="courses-section">
       <h3 class="section-subtitle">Additional Courses</h3>
       <div class="courses-grid">
-        <app-course-card 
-          *ngFor="let course of courses"
-          [course]="course">
-        </app-course-card>
+        @for (course of courses; track course) {
+          <app-course-card
+            [course]="course">
+          </app-course-card>
+        }
       </div>
     </div>
   </div>
 </section>
+}
