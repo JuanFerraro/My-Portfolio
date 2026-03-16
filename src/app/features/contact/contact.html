@@ -1,1 +1,69 @@
-<p>contact works!</p>
+<!-- src/app/features/contact/contact.component.html -->
+<section class="contact-section" [class.designer-mode]="themeService.currentTheme() === 'designer'">
+  <div class="container">
+    <h2 class="subtitle">Get In Touch</h2>
+    
+    <div class="contact-content">
+      <!-- Left side: Greeting and Info -->
+      <div class="contact-info">
+        <p class="greeting">{{ contactInfo.greeting }}</p>
+        
+        <div class="info-items">
+          <!-- Email -->
+          <div class="info-item" (click)="copyEmail()" title="Click to copy">
+            <div class="info-icon">
+              <fa-icon [icon]="icons.faEnvelope"></fa-icon>
+            </div>
+            <div class="info-details">
+              <span class="info-label">Email</span>
+              <span class="info-value">{{ contactInfo.email }}</span>
+            </div>
+          </div>
+          
+          <!-- Location -->
+          <div class="info-item">
+            <div class="info-icon">
+              <fa-icon [icon]="icons.faMapMarkerAlt"></fa-icon>
+            </div>
+            <div class="info-details">
+              <span class="info-label">Location</span>
+              <span class="info-value">{{ contactInfo.location }}</span>
+            </div>
+          </div>
+          
+          <!-- Availability -->
+          <div class="info-item">
+            <div class="info-icon">
+              <fa-icon [icon]="icons.faClock"></fa-icon>
+            </div>
+            <div class="info-details">
+              <span class="info-label">Availability</span>
+              <span class="info-value">{{ contactInfo.availability }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right side: Social Links -->
+      <div class="social-section">
+        <h3 class="social-title">Connect with me</h3>
+        <div class="social-grid">
+          <a *ngFor="let link of contactInfo.socialLinks"
+             [href]="link.url"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-card"
+             [style.--social-color]="link.color">
+            <div class="social-icon">
+              <fa-icon [icon]="getIcon(link.icon)"></fa-icon>
+            </div>
+            <div class="social-info">
+              <span class="social-name">{{ link.name }}</span>
+              <span class="social-username">{{ link.username }}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
