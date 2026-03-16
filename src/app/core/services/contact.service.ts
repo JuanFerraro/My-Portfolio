@@ -24,6 +24,13 @@ export class ContactService {
       username: '@juanferraro',
       color: '#333'
     },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/juan-barrios-ferraro-397982348/',
+      icon: 'faLinkedin',
+      username: 'in/juan-barrios-ferraro',
+      color: '#0077b5'
+    },
   ];
   
 
