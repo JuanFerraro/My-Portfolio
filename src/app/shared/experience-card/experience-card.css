@@ -201,13 +201,6 @@
 @media (max-width: 768px) {
   .experience-card {
     padding: 1.5rem;
-    margin-left: 1rem;
-  }
-  
-  .timeline-dot {
-    left: -1.5rem;
-    width: 12px;
-    height: 12px;
   }
   
   .card-header {
