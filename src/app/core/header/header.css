@@ -65,5 +65,13 @@
 @media (max-width: 768px) {
   .portfolio-header {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .title-section{
+    flex: 0;
   }
 }
