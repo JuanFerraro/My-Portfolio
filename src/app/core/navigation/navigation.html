@@ -8,7 +8,11 @@
         [class.expanded]="currentTheme() === 'software'"
         [class.collapsed]="currentTheme() === 'designer'"
         (click)="setTheme('software')">
-        <span class="btn-text">SOFTWARE DEVELOPER</span>
+        @if (currentTheme() === 'designer'){
+          <span class="btn-text">DEV</span>
+        } @else {
+          <span class="btn-text">SOFTWARE DEVELOPER</span>
+        }
       </button>
       
       <!-- Designer Button -->
