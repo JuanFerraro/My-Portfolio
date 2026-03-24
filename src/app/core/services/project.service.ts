@@ -67,7 +67,7 @@ export class ProjectService {
       technologies: ['Photoshop', 'Illustrator'],
       date: '2025',
       platform: 'behance',
-      platformUrl: 'https://www.behance.net/gallery/245078227/Picadito',
+      platformUrl: 'https://www.behance.net/gallery/244866989/Biches',
       category: 'design'
     },
     {
