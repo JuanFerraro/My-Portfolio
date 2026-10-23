@@ -80,6 +80,17 @@ export class ProjectService {
       platform: 'behance',
       platformUrl: 'https://www.behance.net/gallery/245078227/Picadito',
       category: 'design'
+    },
+    {
+      id: 7,
+      title: 'Koena Spa',
+      description: 'Brand and Logo design for a spa business',
+      imageUrl: 'assets/images/koena.png',
+      technologies: ['Photoshop', 'Illustrator'],
+      date: '2026',
+      platform: 'behance',
+      platformUrl: 'https://www.behance.net/gallery/257523273/Koena',
+      category: 'design'
     }
   ];
   
